@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>대석산업(주) · DAE SUK INDUSTRIAL CO., LTD.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0c1a2e',
+          ink2: '#162a46',
+          inkDeep: '#060d18',
+          paper: '#ffffff',
+          paper2: '#f5f6f8',
+          rule: '#e5e7eb',
+          rule2: '#d1d5db',
+          mute: '#6b7280',
+          mute2: '#9ca3af',
+          steel: '#1e293b',
+          accent: '#e8920d',
+          accent2: '#f5a623',
+          blueprint: '#0c1a2e',
+          bp2: '#162a46',
+        },
+        fontFamily: {
+          sans: ['Pretendard', 'Inter', 'system-ui', 'sans-serif'],
+          display: ['Montserrat', 'Pretendard', 'Inter', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+          serif: ['Pretendard', 'Inter', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Pretendard', Inter, system-ui, sans-serif; color: #0c1a2e; background: #ffffff; -webkit-font-smoothing: antialiased; }
+  .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  .font-display { font-family: 'Montserrat', 'Pretendard', Inter, sans-serif; letter-spacing: -0.01em; }
+  .font-serif { font-family: 'Pretendard', Inter, system-ui, sans-serif; }
+  .hairline { border-color: #e5e7eb; }
+  .hairline-dark { border-color: rgba(255,255,255,0.12); }
+  .dark-section-bg {
+    background-color: #0c1a2e;
+    background-image:
+      radial-gradient(ellipse at 20% 40%, rgba(232,146,13,0.10), transparent 55%),
+      radial-gradient(ellipse at 85% 80%, rgba(232,146,13,0.05), transparent 50%),
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  }
+  .blueprint-bg {
+    background-color: #0c1a2e;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .paper-bg { background-color: #ffffff; }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 600ms ease, transform 600ms cubic-bezier(.2,.7,.2,1); }
+  .reveal.is-visible { opacity: 1; transform: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .tbl-scroll::-webkit-scrollbar { height: 6px; }
+  .tbl-scroll::-webkit-scrollbar-thumb { background: #d1d5db; }
+  @keyframes bounceY { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(4px); } }
+  .bounce-y { animation: bounceY 2s ease-in-out infinite; }
+  @keyframes toastIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .toast-in { animation: toastIn 260ms cubic-bezier(.2,.7,.2,1); }
+  /* marquee */
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee { animation: marquee 40s linear infinite; }
+  /* link underline */
+  .u-link { background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%; }
+  .u-link:hover { background-size: 100% 2px; }
+  /* header shadow when scrolled */
+  .header-shadow { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  /* card hover lift */
+  .card-lift { transition: transform 300ms cubic-bezier(.2,.7,.2,1), box-shadow 300ms ease; }
+  .card-lift:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(12,26,46,0.18); }
+  /* text selection */
+  ::selection { background: #e8920d; color: #fff; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="icons.jsx"></script>
+<script type="text/babel" src="blueprints.jsx"></script>
+<script type="text/babel" src="data.jsx"></script>
+<script type="text/babel" src="sections.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
